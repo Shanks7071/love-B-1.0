@@ -4,16 +4,15 @@
 
 
 // ----------------------------------------------------------------------------------------------------------------------- //
-int maxSubarraySum(int arr[], int n) {
-    int dp[n];
-    dp[0] = max(INT_MIN, arr[0]);
-    int omax = dp[0];
+int maxSubarraySum(int arr[], int n)
+{
+    if (start >= end)
+        return;
 
-    for (int i = 1;i < n;i++) {
+    int temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
 
-        dp[i] = max(arr[i] + dp[i - 1], arr[i]);
-
-        omax = max(dp[i], omax);
-    }
-    return omax;
+    // Recursive Function calling
+    rvereseArray(arr, start + 1, end - 1);
 }
