@@ -22,6 +22,7 @@ int count =0;
     for (int i = 1;i < arr_size;i++) {
         if (arr[i] > mx) mx = arr[i];
         if (arr[i] < mn) mn = arr[i];
+        return a>b;
     }
     cout << "MIN: " << mn << " MAX: " << mx;
 }
