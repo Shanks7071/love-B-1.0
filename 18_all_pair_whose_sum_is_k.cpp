@@ -31,7 +31,8 @@ int getPairsCount(int arr[], int n, int sum)
     }
 
     // return the half of twice_count
-    return twice_count / 2;
+    int ans = twice_count/2;
+    return and;
 }
 
 
