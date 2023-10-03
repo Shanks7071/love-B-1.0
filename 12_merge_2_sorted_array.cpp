@@ -22,10 +22,38 @@ void merge(int arr1[], int arr2[], int n, int m)
         }
     }
     // swap with the largest element.
+while (i < n && j < m) {
+        if (arr1[i] == arr2[j]) {
+            arr.push_back(arr1[i++]);
+            arr.push_back(arr2[j++]);
+        }
+        else if (arr1[i] < arr2[j]) arr.push_back(arr1[i++]);
+        else arr.push_back(arr2[j++]);
+    }
+    while (i < n) arr.push_back(arr1[i++]);
 
+    while (j < m) arr.push_back(arr2[j++]);
+
+    for (int i = 0;i < arr.size();i++) {
+        cout << arr[i] << " ";
+    }
     // Sort first array
     sort(arr1, arr1 + n);
+while (i < n && j < m) {
+        if (arr1[i] == arr2[j]) {
+            arr.push_back(arr1[i++]);
+            arr.push_back(arr2[j++]);
+        }
+        else if (arr1[i] < arr2[j]) arr.push_back(arr1[i++]);
+        else arr.push_back(arr2[j++]);
+    }
+    while (i < n) arr.push_back(arr1[i++]);
 
+    while (j < m) arr.push_back(arr2[j++]);
+
+    for (int i = 0;i < arr.size();i++) {
+        cout << arr[i] << " ";
+    }
     // Sort second array
     sort(arr2, arr2 + m);
 }
